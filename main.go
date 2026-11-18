@@ -20,9 +20,9 @@ func main() {
 	scanner := bufio.NewScanner(file)
 
 	for scanner.Scan() {
-		url := strings.TrimSpace(scanner.Text())
-		if url != "" {
-			fmt.Println(url)
+		site := strings.TrimSpace(scanner.Text())
+		if site != "" {
+			fmt.Println(site)
 		}
 	}
 
