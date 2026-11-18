@@ -1,0 +1,14 @@
+{
+  "name": "uptime-checker-go",
+  "image": "mcr.microsoft.com/devcontainers/go:1",
+  "customizations": {
+    "vscode": {
+      "extensions": ["golang.go"],
+      "settings": {
+        "github.copilot.enable": { "*": false },
+        "editor.inlineSuggest.enabled": false,
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}
