@@ -40,6 +40,7 @@ func checkURL(site string) (int, int64, error) {
 	return response.StatusCode, timeTaken, nil
 }
 
+// errorLabel turns a request error into a short label.
 func errorLabel(err error) string {
 
 	var timeoutErr net.Error
@@ -75,7 +76,6 @@ func main() {
 			statusCode, timeTaken, err := checkURL(site)
 			// A failed site prints its error and the loop carries on.
 			if err != nil {
-				// errorLabel turns a request error into a short label.
 				errLabel := errorLabel(err)
 				fmt.Println(site, "-", errLabel)
 			} else {
